@@ -1,0 +1,47 @@
+/* Base typography and layout */
+body {
+    background-color: #e5f3fb /*calming pale blue*/
+    font-family: 'Merriweather', serif; /* Readable serif font*/
+    font-size: 16px; 
+    color: #333;  /*Dark gray for good contrast*/
+    width: 100%;
+    max-width: 700px; /*Comfortable reading width*/
+    margin: 0 auto;  /* Center the content*/
+    padding: 40px; /* Ample padding for breathing room */
+    line-height: 1.6; /* enhanced readibility */
+    box-sizing: border-box;  /*consistent element sizing */
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', sans-serif; /* Bolder, complementary font*/
+    color: #222; /* Slightly darker shade */
+    text-transform: uppercase; /* more modern look */
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 20px; /* Space between paragraphs */
+}
+
+/* Bullet points */
+ul {
+    list-style-type: none; /* Remove default bullets */
+}
+li {
+    margin-bottom: 5px; /* Space between list items */
+}
+li::before {
+    content: '\2713'; /* Discreet checkmark */
+    margin-right: 10px;
+    color: #999; /* Lighter shade for less emphasis */
+}
+
+/* Links */
+a {
+    color: #007bff; 
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline; /* Underline on hover only*/
+}
