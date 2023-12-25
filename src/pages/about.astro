@@ -1,5 +1,10 @@
 ---
-
+const pageTitle = "About Me"
+const identity = {
+    firstName: "Nissan",
+    country: "United States",
+}
+const codingSkills = ["HTML", "CSS", "Javascript", "React", "Redux", "Astro", "Python"]
 ---
 
 <html lang="en">
@@ -8,17 +13,17 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<a href="/"> Home </a>
         <a href="/about/"> About </a>
         <a href="/blog/"> Blog </a>
 
-		<h1>About Me</h1>
-        <h2> One Minute Version </h2>
+		<h1>{pageTitle}</h1>
+        <h2> About {identity.firstName}: One Minute Version </h2>
         <p> Honesty, Diligent, Analytical & Open-minded professional. Data-driven marketer. </p>
-        <h2> Long Version </h2>
+        <h2> About {identity.firstName}: Long Version </h2>
         <p> 
             I am a diligent and open-minded professional known for my integrity and adaptability. 
             With experience spanning both the financial services sector at Madison Trust and e-commerce operations at Scharf Industries, I've honed a versatile skill set.
@@ -35,5 +40,10 @@
             As a full-stack developer, I want to stay abreast on the latest technologies and create a blog website from scratch.
             Not sure where this coding adventure will take me. But stay tuned as it progressed further.
         </p>
+        <h4> Skills </h4>
+        <p> Coding Skills </p>
+        <ul>
+            {codingSkills.map((skill) => <li>{skill}</li>)}
+        </ul>
     </body>
 </html>
