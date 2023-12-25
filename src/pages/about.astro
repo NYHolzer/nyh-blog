@@ -1,10 +1,16 @@
 ---
-const pageTitle = "About Me"
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro'; 
+
+const pageTitle = "About Me";
 const identity = {
     firstName: "Nissan",
     country: "United States",
-}
-const codingSkills = ["HTML", "CSS", "Javascript", "React", "Redux", "Astro", "Python"]
+};
+const codingSkills = ["HTML", "CSS", "Javascript", "React", "Redux", "Astro", "Python"];
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
 ---
 
 <html lang="en">
@@ -14,11 +20,20 @@ const codingSkills = ["HTML", "CSS", "Javascript", "React", "Redux", "Astro", "P
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+        <style define:vars={{skillColor, fontWeight, textCase}}>
+            h1 {
+                color: blue;
+                font-size: 4rem;
+            }
+            .skill {
+                color: var(--skillColor);
+                font-weight: var(--fontWeight);
+                text-transform: var(--textCase);
+            }
+        </style>
 	</head>
 	<body>
-		<a href="/"> Home </a>
-        <a href="/about/"> About </a>
-        <a href="/blog/"> Blog </a>
+        <Navigation/>
 
 		<h1>{pageTitle}</h1>
         <h2> About {identity.firstName}: One Minute Version </h2>
@@ -43,7 +58,7 @@ const codingSkills = ["HTML", "CSS", "Javascript", "React", "Redux", "Astro", "P
         <h4> Skills </h4>
         <p> Coding Skills </p>
         <ul>
-            {codingSkills.map((skill) => <li>{skill}</li>)}
+            {codingSkills.map((skill) => <li class="skill">{skill}</li>)}
         </ul>
     </body>
 </html>
