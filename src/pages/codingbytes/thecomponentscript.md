@@ -1,9 +1,10 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: "Unleashing Astro's Secret Weapon: The Component Script"
 pubDate: 2023-12-25
 description: "Discover how to add superpowers to your Astro pages with the unassuming, yet powerful component script."
 author: 'Nissan Holzer'
-tags: ["astro"]
+tags: ["astro", "code fence", "the component script"]
 ---
 
 # Unlocking Astro's Hidden Potential with the Component Script
@@ -16,7 +17,7 @@ Component scripts take inspiration from Markdown's frontmatter, the metadata pow
 
 ## A Fenced Playground for Your Creativity
 
-Component scripts reside within a special code fence, creating a safe haven for your creativity. What happens within this fence stays within this fence. It's like a secret code chamber where you can experiment with interactivity, data fetching, and custom logic without exposing any sensitive code to your users' browsers.
+Component scripts reside within a special **code fence**, creating a safe haven for your creativity. What happens within this fence stays within this fence. It's like a secret code chamber where you can experiment with interactivity, data fetching, and custom logic without exposing any sensitive code to your users' browsers.
 
 ## Benefits Galore:
 

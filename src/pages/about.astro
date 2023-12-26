@@ -1,6 +1,5 @@
 ---
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro'; 
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "About Me";
 const identity = {
@@ -12,53 +11,29 @@ const skillColor = "navy";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
+<BaseLayout>
+    <h2> About {identity.firstName}: One Minute Version </h2>
+    <p> Honesty, Diligent, Analytical & Open-minded professional. Data-driven marketer. </p>
+    <h2> About {identity.firstName}: Long Version </h2>
+    <p> 
+        I am a diligent and open-minded professional known for my integrity and adaptability. 
+        With experience spanning both the financial services sector at Madison Trust and e-commerce operations at Scharf Industries, I've honed a versatile skill set.
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-        <style define:vars={{skillColor, fontWeight, textCase}}>
-            h1 {
-                color: blue;
-                font-size: 4rem;
-            }
-            .skill {
-                color: var(--skillColor);
-                font-weight: var(--fontWeight);
-                text-transform: var(--textCase);
-            }
-        </style>
-	</head>
-	<body>
-        <Navigation/>
+        At Madison Trust, I collaborated across various departments, including compliance, investments, and marketing, leveraging data-driven insights to drive decisions. 
+        My tenure at Scharf Industries, where I spent over five years, equipped me with expertise in the end-to-end process of selling on major platforms like Amazon, eBay, and Walmart.
 
-		<h1>{pageTitle}</h1>
-        <h2> About {identity.firstName}: One Minute Version </h2>
-        <p> Honesty, Diligent, Analytical & Open-minded professional. Data-driven marketer. </p>
-        <h2> About {identity.firstName}: Long Version </h2>
-        <p> 
-            I am a diligent and open-minded professional known for my integrity and adaptability. 
-            With experience spanning both the financial services sector at Madison Trust and e-commerce operations at Scharf Industries, I've honed a versatile skill set.
-
-            At Madison Trust, I collaborated across various departments, including compliance, investments, and marketing, leveraging data-driven insights to drive decisions. 
-            My tenure at Scharf Industries, where I spent over five years, equipped me with expertise in the end-to-end process of selling on major platforms like Amazon, eBay, and Walmart.
-
-            My work philosophy is shaped by principles such as 'The 7 Habits,' 'Radical Candor,' and emotional intelligence. 
-            I'm passionate about continuous learning and making a positive impact in the workplace, particularly in roles that allow me to harness the power of data to drive results.
-        </p>
-        <h3> About this website </h3>
-        <p> 
-            This website is gradually being created using AstroJS.
-            As a full-stack developer, I want to stay abreast on the latest technologies and create a blog website from scratch.
-            Not sure where this coding adventure will take me. But stay tuned as it progressed further.
-        </p>
-        <h4> Skills </h4>
-        <p> Coding Skills </p>
-        <ul>
-            {codingSkills.map((skill) => <li class="skill">{skill}</li>)}
-        </ul>
-    </body>
-</html>
+        My work philosophy is shaped by principles such as 'The 7 Habits,' 'Radical Candor,' and emotional intelligence. 
+        I'm passionate about continuous learning and making a positive impact in the workplace, particularly in roles that allow me to harness the power of data to drive results.
+    </p>
+    <h3> About this website </h3>
+    <p> 
+        This website is gradually being created using AstroJS.
+        As a full-stack developer, I want to stay abreast on the latest technologies and create a blog website from scratch.
+        Not sure where this coding adventure will take me. But stay tuned as it progressed further.
+    </p>
+    <h4> Skills </h4>
+    <p> Coding Skills </p>
+    <ul>
+        {codingSkills.map((skill) => <li class="skill">{skill}</li>)}
+    </ul>
+</BaseLayout>

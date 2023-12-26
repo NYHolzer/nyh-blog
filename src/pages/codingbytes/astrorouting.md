@@ -1,9 +1,10 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: "Astro Routing"
-pubDate: 2023-12-25
-description: 'Say goodbye to the tangle of routing configurations and hello to a development paradise! Astro's revolutionary routing system lets you ditch the complexity and focus on what matters most - building exceptional web experiences. Drop a file, and voila! You've got a route. It's that simple.'
+pubDate: 2023-12-24
+description: "Say goodbye to the tangle of routing configurations and hello to a development paradise! Astro's revolutionary routing system lets you ditch the complexity and focus on what matters most - building exceptional web experiences. Drop a file, and voila! You've got a route. It's that simple."
 author: 'Nissan Holzer'
-tags: ["astro"] 
+tags: ["astro","routing"]
 ---
 
 # Effortless Navigation with Astro Routing: A Developer's Delight
@@ -11,7 +12,6 @@ tags: ["astro"]
 ## No Config, No Fuss: Just Add a File, and Voilà!
 
 > *Tired of wrestling with complex routing configurations? Astro offers a refreshing approach that's as simple as placing a file! Let's dive into how Astro's intuitive routing system streamlines your development experience.*
-
 
 
 ### Static Routes
