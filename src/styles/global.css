@@ -1,7 +1,7 @@
 /* Base typography and layout */
 body {
     background-color: #e5f3fb /*calming pale blue*/
-    font-family: 'Merriweather', serif; /* Readable serif font*/
+    font-family: 'Merriweather'; /* Readable serif font*/
     font-size: 16px; 
     color: #333;  /*Dark gray for good contrast*/
     width: 100%;
@@ -48,64 +48,66 @@ a:hover {
 
 
 /* Navigation bar base styles */
-.navbar {
-    background-color: #fff; /* Consistent with light, calming theme */
-    background-image: linear-gradient(to bottom,#fff,#f5f5f5); /*subtle gradient*/
-    border-bottom: 1px solid #eee; /* Subtle border for definition */
-    padding: 15px 0;
-    font-family: 'Merriweather', serif; /* Matching body font for unity */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+  .hamburger {
+    padding-right: 20px;
+    cursor: pointer;
+  }
+
+  .hamburger .line {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: #ff9776;
   }
   
   /* Navigation links */
-  .navbar-links {
-    display: flex;
-    justify-content: space-between; /* Evenly distribute links */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-links ul{
-    list-style:none;
+  .nav-links {
+    width: 100%;
+    top: 5 rem;
+    left: 48px;
+    background-color: #ff9776
+    display: none;
+    margin: 0
   }
 
-  .navbar-links li {
-    margin-left: 15px; /* Spacing between links */
-  }
-  .navbar-links li::before {
-    content: none; /* Remove the checkmark content */
-  }
-  
-  .navbar-links a {
+  .nav-links a {
     color: #333; /* Dark gray for readability */
+    display: block;
+    text-align: center;
+    padding: 10px 0;
     text-decoration: none;
     transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out; 
-  }
-  
-  .navbar-links a:hover {
-    color: #007bff; /* Blue for emphasis on hover */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
-  /* Active link highlight (adjust selector as needed) */
-.navbar-links li.active a {
-  background-color: #f0f8ff; /* Soft blue background for active link */
-}
-  
-  /* Brand/logo styling (adjust selectors as needed) */
-  .navbar-brand {
-    font-weight: bold;
-    font-size: 1.2rem;
+  .nav-links a:hover,
+  .nav-links a:focus {
+    background-color: #007bff; /* Blue for emphasis on hover */
+  }
+
+  .expanded {
+    display: unset;
   }
   
   /* Responsive adjustments for smaller screens */
-  @media (max-width: 768px) {
-    .navbar-links {
-      flex-direction: column;
-      align-items: center;
+  @media screen and (min-width: 636px) {
+    .nav-links {
+      margin-left: 5em;
+      display: block;
+      position: static;
+      width: auto;
+      background: none;
     }
   
-    .navbar-links li {
-      margin: 10px 0;
+    .nav-links a {
+      display: inline-block;
+      padding: 15px 20px;
     }
+  }
+
+  .hamburger {
+    display: none;
   }
